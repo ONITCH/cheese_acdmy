@@ -1,0 +1,70 @@
+/*アコーディオン全体*/
+.accordion-area {
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-area li {
+    margin: 20px 0;
+}
+
+.accordion-area section {
+    border: 1px solid rgb(204, 204, 204);
+}
+
+/*アコーディオンタイトル*/
+.acc_title {
+    position: relative;
+    /*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+.acc_title::before,
+.acc_title::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+
+}
+
+.acc_title::before {
+    top: 48%;
+    left: 15px;
+    transform: rotate(0deg);
+
+}
+
+.acc_title::after {
+    top: 48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+.acc_title.close::before {
+    transform: rotate(45deg);
+}
+
+.acc_title.close::after {
+    transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.acc_box {
+    display: none;
+    /*はじめは非表示*/
+    background: white;
+    margin: 0 3% 3% 3%;
+    /*枠をつけるなら下に*/
+    padding: 0%;
+}

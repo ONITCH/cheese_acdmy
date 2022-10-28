@@ -1,0 +1,709 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	/*下消したら全画面*/
+	width: 1300px;
+	margin: 0 auto;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+.title {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	color: rgb(0, 0, 0);
+	margin-bottom: 80px;
+}
+
+
+
+
+h1 {
+	font-size: 60px;
+	padding-left: 45px;
+	padding-bottom: 0px;
+	padding-top: 120px
+}
+
+.title p {
+	font-size: 35px;
+	font-weight: bold;
+	padding-left: 50px;
+}
+
+/*スマホ*/
+@media (max-width: 500px) {
+	.title {
+		background-image: url("../img/top_cheese_smart.png");
+		height: 498px;
+	}
+}
+
+@media (min-width: 501px) {
+	.title {
+		background-image: url("../img/top_cheese.png");
+	}
+}
+
+@media screen and (max-width:500px) {
+	body {
+		width: 500px;
+	}
+
+	h1 {
+		font-size: 30px;
+
+	}
+
+	.title p {
+		font-size: 30px;
+		margin-top: 220px;
+	}
+
+}
+
+/*スマホここまで*/
+
+.menu_bar {
+	height: 80px;
+	width: 100%;
+	border-top: 4px solid;
+	border-bottom: 4px solid;
+	border-color: #efefef;
+	font-size: 20px;
+	background-color: white;
+}
+
+.image_logo {
+	padding-top: 20px;
+}
+
+.menu_bar div {
+	height: 76px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+}
+
+#global-nav.m_fixed {
+	position: fixed;
+	top: 0;
+	width: 1300px;
+	z-index: 100;
+}
+
+.menu {
+	display: flex;
+	font-family: 'Lato', sans-serif;
+}
+
+.menu li {
+	margin-right: 50px;
+}
+
+/*スマホ*/
+@media screen and (max-width:500px) {
+	.menu_bar div {
+		width: 500px;
+		display: flex;
+		justify-content: space-evenly;
+		margin: 0px 10px
+	}
+
+	.menu {
+
+		font-size: small;
+		padding-right: 10px;
+
+	}
+
+	.menu li {
+		margin-right: 12px;
+	}
+
+
+	.img_logo {
+		width: 100px;
+		height: 20px;
+		margin: 0px 20px;
+	}
+
+}
+
+/*スマホここまで*/
+
+p5 {
+	padding-bottom: 100px;
+}
+
+
+
+a {
+	color: inherit;
+}
+
+.about {
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 80px;
+}
+
+p1 {
+	text-align: center;
+	padding-bottom: 40px;
+	font-weight: bold;
+}
+
+p2 {
+	padding-bottom: 40px;
+}
+
+.explanation {
+	text-align: center;
+}
+
+.about div {
+	display: flex;
+	flex-direction: column;
+}
+
+h2 {
+	color: #ffd61a;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
+
+.loop_wrap {
+	display: flex;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.loop_wrap img {
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes loop {
+	0% {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes loop2 {
+	0% {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-200%);
+	}
+}
+
+.loop_wrap img:first-child {
+	animation: loop 50s -25s linear infinite;
+}
+
+.loop_wrap img:last-child {
+	animation: loop2 50s linear infinite;
+}
+
+
+
+
+.more {
+	padding-bottom: 48px;
+}
+
+/*スマホ*/
+@media screen and (max-width:500px) {
+	p2 {
+		text-align: left;
+	}
+
+	.explanation {
+		text-align: left;
+		margin: 0px 40px;
+		font-size: 15px;
+	}
+
+	.loop_wrap {
+		height: 100px
+	}
+}
+
+/*スマホここまで*/
+
+/*course*/
+.course_box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 64px 0px;
+}
+
+h3 {
+	padding-bottom: 10px;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+}
+
+.course_box1 {
+	display: flex;
+	justify-content: center;
+}
+
+.course_img1 {
+	width: 50%;
+}
+
+.course_text1 {
+	background-color: #fafafa;
+	width: 50%;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+h4 {
+	font-size: 24px;
+	padding-bottom: 40px;
+}
+
+.course_text1 div {
+	padding: 0 30px;
+}
+
+/* ２段目 */
+.course_box2 {
+	display: flex;
+	justify-content: center;
+}
+
+.course_img2 {
+	width: 50%;
+}
+
+.course_text2 {
+	background-color: #fafafa;
+	width: 50%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
+h4 {
+	font-size: 24px;
+	padding-bottom: 40px;
+}
+
+.course_text2 div {
+	padding: 0 30px;
+}
+
+/*スマホ*/
+@media screen and (max-width:500px) {
+	.course p {
+		margin: 0px 40px;
+	}
+
+	.course_box1 {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.course_img1 {
+		width: 100%;
+		padding: 25px;
+	}
+
+	.course_text1 {
+		width: 100%;
+	}
+
+	.course p {
+		margin: 0px;
+	}
+
+	.course_text1 div {
+		padding: 30px;
+	}
+
+	.course_box2 {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.course_text2 {
+		width: 100%;
+	}
+
+	.course_text2 div {
+		padding: 30px;
+	}
+
+	.course_img2 {
+		width: 100%;
+		padding: 25px;
+	}
+
+}
+
+/*スマホここまで*/
+
+.news_top {
+	display: flex;
+	justify-content: center;
+	padding: 64px 0px;
+}
+
+.news_boxes {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.news_box1 {
+	width: 360px;
+}
+
+.news_box1 img {
+	padding-bottom: 32px;
+	width: 100%;
+}
+
+.news_box1 p {
+	padding-top: 24px;
+}
+
+.more {
+	text-align: center;
+	padding-top: 56px;
+}
+
+/*スマホ*/
+@media screen and (max-width:500px) {
+	.news_box1 img {
+		padding: 10px
+	}
+
+	.news_box1 p {
+		padding: 10px;
+		font-size: 14px;
+	}
+
+	.news_box1 p1 {
+		padding: 10px;
+	}
+
+}
+
+/*スマホここまで*/
+
+/*アクセス*/
+.access {
+	background-color: #fafafa;
+}
+
+.access_top div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 64px 0px;
+	flex-direction: column;
+}
+
+.access_bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 64px 0px;
+}
+
+.access_bottom div {
+	display: flex;
+	padding-bottom: 20px;
+
+}
+
+.address {
+	width: 150px;
+	display: flex;
+}
+
+.address2 {
+	width: 500px;
+}
+
+/*スマホ*/
+@media screen and (max-width:500px) {
+	.access_bottom div {
+		width: 500px;
+		padding: 10px 20px;
+	}
+
+	.googlemap {
+		width: 450px;
+		margin: 0 auto;
+	}
+
+}
+
+/*スマホここまで*/
+
+.contact_top div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 64px 0px;
+	flex-direction: column;
+}
+
+
+.item {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 24px;
+}
+
+.label {
+	width: 250px;
+}
+
+.inputs {
+	width: 328px;
+}
+
+.inputs div {
+	display: flex;
+	padding-bottom: 20px;
+	width: 450px;
+}
+
+input {
+	border: solid 1px #aaa;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+textarea {
+	border: solid 1px #aaa;
+	border-radius: 5px;
+	padding: 10px;
+	height: 108px;
+	width: 328px;
+	font-size: 15px;
+}
+
+iframe {
+	height: 300px;
+	width: 100%;
+}
+
+.btn-area {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 120px;
+}
+
+.button {
+	display: inline-block;
+	background: #ffd61a;
+	border-width: 0px;
+	color: white;
+	width: 298px;
+	height: 54px;
+	font-size: 24px;
+	font-family: 'Lato', sans-serif;
+
+}
+
+
+.top_btn {
+	padding: 10px;
+	display: flex;
+	justify-content: end;
+}
+
+.page_top_btn {
+	right: 10px;
+	text-align: center;
+	transition: 0.3s0;
+
+}
+
+/*スマホ*/
+@media screen and (max-width:500px) {
+	.item {
+		width: 500px;
+		padding: 20px;
+	}
+
+	.inputs div {
+		width: 250px
+	}
+
+
+}
+
+/*スマホここまで*/
+
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 62px;
+	background-color: #ffd61a;
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+/*スマホ*/
+@media screen and (max-width:500px) {
+	footer p {
+		padding: 20px;
+		font-size: 10px;
+	}
+}
+
+
+/*スマホここまで*/
+
+/*POPUP
+---------------------*/
+
+
+/*ポップアップここから*/
+.popup_wrap input {
+	display: none;
+}
+
+.popup_overlay {
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	opacity: 0;
+	transition: opacity 0.5s, transform 0s 0.5s;
+	transform: scale(0);
+}
+
+.popup_trigger {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.popup_content {
+	position: relative;
+	align-self: center;
+	width: 90%;
+	max-width: 800px;
+	padding: 30px 30px 15px;
+	box-sizing: border-box;
+	background: #fff;
+	line-height: 1.4em;
+	transition: 0.5s;
+}
+
+.close_btn {
+	position: absolute;
+	top: 14px;
+	right: 16px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.popup_wrap input:checked~.popup_overlay {
+	opacity: 1;
+	transform: scale(1);
+	transition: opacity 0.5s;
+}
+
+.open_btn {
+	position: relative;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 30px;
+	margin: 10px auto;
+	padding: 8px 16px;
+	color: #fff;
+	background: #0c0d62;
+	font-weight: bold;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .3s ease;
+
+}
+
+.open_btn:hover {
+	background: #000;
+	color: #fff;
+	transition: .3s ease;
+}
+
+/*ポップアップココまで*/
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
